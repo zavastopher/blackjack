@@ -1,0 +1,32 @@
+@import './styles.css';
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 50em;
+}
+
+#back_button {
+    justify-self: right;
+}
+
+h1 {
+    justify-self: center;
+}
+
+.settings {
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}   
+
+input[type=checkbox] {
+    justify-self: right;
+}
+
+#save {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

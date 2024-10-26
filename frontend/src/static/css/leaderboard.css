@@ -1,0 +1,38 @@
+@import './styles.css';
+
+body {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#leaderboard {
+    width: 98vw;
+    max-width: 20em;
+    padding: 0;
+}
+
+#leaderboard .leaderboardRow:nth-child(odd) {
+    background-color: #91c5ab;
+}
+
+#leaderboard .leaderboardRow:nth-child(1) {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+#leaderboard .leaderboardRow:last-child {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.leaderboardRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    padding-left: 5px;
+    height: auto;
+}
+
+.columns.is-gapless:not(:last-child) {
+    margin-bottom: 0;
+}

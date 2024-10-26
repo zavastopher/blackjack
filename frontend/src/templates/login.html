@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---->
+    <head>
+        <link rel="manifest" href="manifest.json" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="manifest" href="/images/site.webmanifest">
+        <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/images/favicon.ico">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-config" content="/images/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Style for the page -->
+        <link rel="stylesheet" href="./css/login.css">
+        <!-- <link rel="stylesheet" href="/M1/frontend/src/static/css/login.css"> -->
+
+        <!--JavaScript for the page-->
+        <script src="./js/login_script.js" type="module"></script>
+    </head>
+
+    <body>
+        <div class="headerInfo">
+            <img id="logo" src="./images/bjlogo.png">
+            <h1 class="title is-1">Black Jack</h1>
+            <h3 class="title is-2">Login</h3>
+        </div>
+        <!--This form gets the account associated with the
+            login info put into the form-->
+        
+        <fieldset id="form_area">
+            <div class="formField">
+                <label class="label" for="username">Username: </label>
+                <input class="input is-primary" id="username" name="username" type="text" placeholder="Enter Username..." required>
+            </div>
+            <div class="formField">
+                <label class="label" for="password">Password: </label>
+                <input class="input is-primary" id="password" name="password" type="password" placeholder="Enter password..." required>
+            </div>
+            <h3 class='subtitle is-6 errormessage' id="errormessage">Username or Password was incorrect</h3>
+        </fieldset> 
+        <div id="buttons_area">
+            <button class="button is-primary" id="submit_button" name="submit_button">Log In</button>
+            <button class="button is-primary" id="home" name="home">Home</button>
+            <button class="button is-primary" id="sign_up_btn" name="sign_up_btn" value="sign_up">Don't have an account? Sign up!</button>
+        </div>
+        
+        
+    </body>
+</html>

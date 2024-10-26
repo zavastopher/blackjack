@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style for the page -->
+    <!--<link rel="stylesheet" href="./css/options.css">-->
+    <link rel="stylesheet" href="./css/options.css">
+
+    <!--JavaScript for the page-->
+    <script type="module" src="./js/options_script.js" defer></script>
+</head>
+
+<body>
+    <header class="settingsHeader">
+        <button class="button is-primary" id="back_button">Back</button>
+        <h1 class="title">Settings</h1>
+    </header>
+    <!--Form for options on the page-->
+    <section class="settings">
+
+        <label class="label" for="notifications">Notifications</label>
+        <input type="checkbox" name="notifications" id="notifications">
+        <label class="label" for="sound">Sound</label>
+        <input id="sound" name="sound" type="range">
+        <button class="button is-primary" type="submit" name="save" id="save">Save</button>
+    </section>
+</body>

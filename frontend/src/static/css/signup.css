@@ -1,0 +1,12 @@
+@import './styles.css';
+
+#login_btn {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#successmessage {
+    margin: 5px;
+    color: rgb(3, 255, 179);
+    display: none;
+}

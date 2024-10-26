@@ -1,0 +1,19 @@
+@import './styles.css';
+
+#buttonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 20em;
+    width: 75vw;
+    gap: 5px;
+}
+
+#gameplay_button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#leaderboard_btn {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

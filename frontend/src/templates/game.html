@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Blackjack</title>
+    <!-- Style for the page -->
+    <link rel="stylesheet" href="/css/game.css">
+
+    <!--JavaScript for the page-->
+    <script type="module" src="/js/game_script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="table" id="dealer-table">
+        <div class="hand">
+            <div id="dealer-score" class="score"></div>
+            <div class="cards">
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        BLACKJACK PAYS 3:2<br>DEALER HITS UNDER 17
+    </div>
+    <div class="table"  id="player-table">
+    </div>
+
+    <nav>
+        <div class="container">
+            <div class="accounting">
+                <div class="label">
+                    balance
+                </div>
+                <div id="balance">
+                    0
+                </div>
+            </div>
+            <div class="accounting">
+                <div class="label" id="bet-label">
+                    total bet
+                </div>
+                <div id="total-bet">
+                    0
+                </div>
+            </div>
+        </div>
+        <button id="home">
+            < home
+        </button>
+    </nav>
+
+    <button id="deal">deal</button>
+    <div id="bet-controls">
+        <button id="decrease" class="selection">◀</button>
+        <div id="current-bet">
+            10
+        </div>
+        <button id="increase" class="selection">▶</button>
+    </div>
+    <div id="main-controls">
+        <button id="double" class="selection">2x</button>
+        <button id="hit" class="selection">H</button>
+        <div id="current-score">
+            test
+        </div>
+        <button id="stand" class="selection">S</button>
+        <button id="split" class="selection">◀▶</button>
+    </div>
+    
+</body>

@@ -1,0 +1,477 @@
+body {
+    max-width: 1500px;
+    margin: auto;
+    text-align: center;
+    color: lightgray;
+    font-family: monospace;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.banner {
+    text-align: center;
+    font-family: serif;
+}
+span {
+    background-color:lightgray;
+    width:100%;
+    display:inline-block;
+    margin:0px 0px;
+    padding: 0px 0px;
+}
+.table {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.seat {
+    width: 100%;
+}
+.hand {
+    text-align: center;
+    padding: 8px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+.cards {
+    padding-top: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.controls {
+    position: absolute;
+    display: none;
+    background-color: rgba(250, 235, 215, 0.858);
+}
+.card-buttons {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: xx-small;
+    background-color: white;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+.card-buttons:hover {
+    background-color: black;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    transition: 0.25s;
+    font-size: xx-small;
+}
+.card-score {
+    font-size: large;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cards:hover > .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 50px;
+    width: 35px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-color: lightgrey;
+    outline:auto;
+    box-shadow: 5px 5px 5px rgb(227, 227, 227);
+}
+card {
+    height: 50px;
+    width: 35px;
+    margin-left: -10px;
+    margin-right: -10px;
+    background-color: lightgrey;
+    outline:auto;
+    box-shadow: 5px 5px 5px rgb(227, 227, 227);
+}
+.chip {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+
+    border-style:dashed;
+    border-color: white;
+    border-width: 3px;
+    background-color: lightgray;
+
+    /*
+    outline-style: dashed;
+    outline-width: 4px;
+    outline-offset: -4px;
+    outline-color: white;
+    border-color: white;
+    border-width: 6px;
+    border-style:double;
+    */
+}
+.chip:hover {
+    translate: -1px -1px;
+    box-shadow: 5px 5px 5px rgb(227, 227, 227);
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.chip:active {
+    translate: 1px 1px;
+}
+.chip:disabled {
+    color: lightgray;
+}
+.chip:disabled:hover {
+    translate: none;
+    box-shadow: none;
+    cursor:auto;
+}
+
+/* these should all be in their own div and be width 100% do this later */
+#main-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    display: none;
+    margin: auto;
+    background-color: lightgray;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+#bet-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    display: flex;
+    margin: auto;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    color: white;
+}
+#deal {
+    font-family: monospace;
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    outline: none;
+    width: 140px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+#deal:hover {
+    translate: -1px -1px;
+    box-shadow: 2px 2px 5px rgb(227, 227, 227);
+}
+#deal:active {
+    translate: 1px 1px;
+}
+.selection {
+    cursor:pointer;
+    background-color: white;
+    color: lightgray;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.1s all;
+    font-weight: bolder;
+}
+.selection:hover {
+    background-color: rgb(233, 233, 233);
+    translate: -1px -1px;
+}
+.selection:active {
+    translate: 1px 1px;
+    background-color: rgb(223, 223, 223);
+}
+
+.center-banner {
+    position:absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    font-size: 75px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: lightgray;
+    border-left: none;
+    border-right: none;
+}
+.green {
+    color: green;
+    border-color: green;
+    background-color: rgba(0, 128, 0, 0.1);
+}
+.red {
+    color: red;
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+.orange {
+    color: orange;
+    border-color: orange;
+    background-color: rgba(255, 166, 0, 0.1);
+}
+.score {
+    margin-bottom: 5px;
+}
+nav {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accounting {
+    color: white;
+    background-color: lightgray;
+    margin-left: 25px;
+    min-width: 90px;
+    padding: 5px;
+    border-radius: 10px;
+    outline-color: white;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: -4px;
+    text-align: center;
+}
+.container {
+    display:flex;
+}
+.label {
+    font-size: xx-small;
+    margin-bottom: 5px;
+}
+#home {
+    font-family: monospace;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    outline: none;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 10px;
+    transition: 0.1s all;
+}
+#home:hover {
+    translate: -1px -1px;
+    box-shadow: 2px 2px 5px rgb(227, 227, 227);
+}
+#home:active {
+    translate: 1px 1px;
+}
+#current-score {
+    width: 50px;
+}
+#current-bet {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+
+    outline-style:dashed;
+    outline-color: white;
+    outline-width: 3px;
+    outline-offset: -2px;
+    background-color: lightgray;
+}
+.indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    margin: auto;
+    color:white;
+}
+.g {
+    background-color: green;
+}
+.r {
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --scale: 0.6;
+}
+.card {
+    position: absolute;
+}
+
+card-body {
+    font-family: serif;
+    display: flex;
+    position: relative;
+    background-color: lightgray;
+    height: calc(250px * var(--scale));
+    width: calc(175px * var(--scale));
+    border-radius: calc(10px * var(--scale));
+    outline-width: calc(5px * var(--scale));
+    outline-color: white;
+    outline-offset: calc(-10px * var(--scale));
+    outline-style:solid;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size:calc(40px * var(--scale));
+    line-height: .9;
+    text-align:center;
+    margin-left: calc(-43.75px * var(--scale));
+    margin-right:calc(-43.75px * var(--scale));
+    box-shadow: 5px 5px 5px rgb(227, 227, 227);
+
+    transform: scale(0.25);
+    translate: 0px -150px;
+    transition: 0.25s ease-out;
+}
+.animate {
+    transform: scale(1);
+    translate: 0px 0px;
+}
+
+card-upper {
+    position:absolute;
+    top:calc(15px * var(--scale));
+    left:calc(15px * var(--scale));
+    color:white;
+    text-align: center;
+}
+
+card-lower {
+    position:absolute;
+    bottom:calc(15px * var(--scale));
+    right:calc(15px * var(--scale));
+    color:white;
+    rotate: 180deg;
+    text-align: center;
+}
+
+face-card {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    width:calc(65px * var(--scale));
+    height:calc(100px * var(--scale));
+    outline:auto;
+    outline-style: double;
+    outline-width: calc(5px * var(--scale));
+    outline-offset: calc(-2px * var(--scale));
+    font-size: calc(75px * var(--scale));
+}
+
+ace {
+    font-size: calc(125px * var(--scale));
+}
+
+number {
+    font-size:calc(33px * var(--scale));
+    text-align:center;
+    width:calc(75px * var(--scale));
+    overflow-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 650px) {
+    body {
+        margin-top: 15vh;
+    }
+    .table {
+        height: 30vh;
+    }
+    .seat {
+        display: flex;
+        justify-content: space-around;
+    }
+    .center-banner {
+        top: 35%;
+        font-size: 50px;
+        border-width: 2px;
+    }
+    :root {
+        --scale: 0.35;
+    }
+    nav {
+        display:block;
+        text-align: left;
+        position: absolute;
+        top: 50px;
+        height:fit-content;
+    }
+}

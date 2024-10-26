@@ -1,0 +1,6 @@
+@import './styles.css';
+
+#sign_up_btn {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

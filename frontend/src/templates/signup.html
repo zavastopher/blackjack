@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---->
+<head>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style for the page -->
+    <!--<link rel="stylesheet" href="./css/leaderboard.css">-->
+    <link rel="stylesheet" href="./css/signup.css">
+    <!--JavaScript for the page-->
+    <script src="./js/signup.js" type="module"></script>
+</head>
+
+<body>
+    <div class="headerInfo">
+        <img id="logo" src="./images/bjlogo.png">
+        <h1 class="title is-1">Black Jack</h1>
+        <h3 class="title is-2">Sign Up</h3>
+    </div>
+    <fieldset id="form_area">
+        <div class="formField">
+            <label class="label" for="email">Email: </label>
+            <input class="input" type="email" id="sign_up_email" name="sign_up_email" placeholder="Enter email..." required>
+        </div>
+        <div class="formField">
+            <label class="label">Username: </label>
+            <input class="input" type="text" id="sign_up_username" name="sign_up_username" placeholder="Enter username..." required>
+        </div>
+        <div class="formField">
+            <label class="label">Password: </label>
+            <input class="input" type="password" id="sign_up_password" name="sign_up_password" placeholder="Enter password..." required>
+        </div>
+        <div class="formField">
+            <label class="label">Confirm Password: </label>
+            <input class="input" type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password..." required>
+        </div>
+        <h3 class='subtitle is-6 successmessage' id="successmessage">Sign Up Successful!</h3>
+        <h3 class='subtitle is-6 errormessage' id="errormessage">There was an error Signing you up</h3>
+    </fieldset>
+    <div id="buttons_area">
+        <button class="button is-primary" id="submit_button" name="submit_button">Sign Up</button>
+        <button class="button is-primary" id="home" name="home">Home</button>
+        <button class="button is-primary" id="login_btn" name="login_page">Already have an account? Log in!</button>
+    </div>
+</body>

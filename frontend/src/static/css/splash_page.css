@@ -1,0 +1,29 @@
+@import './styles.css';
+
+#buttonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 75%; 
+    max-width: 20em;
+    gap: .125em;
+}
+
+#play {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+#options {
+    grid-column: 5;
+}
+
+#login_button {
+    grid-column-end: 3;
+    grid-column-start: 1;
+}
+
+#sign_up_button {
+    grid-column-end: 5;
+    grid-column-start: 3;
+}
